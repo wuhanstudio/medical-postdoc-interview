@@ -238,8 +238,46 @@
                     <p style="font-size: 22px;"><i class="fab fa-github"></i> &nbsp; <a href="https://github.com/wuhanstudio/medical-postdoc-interview">Source Code</a></p>
                 </section>
 
+                <section>
+                    <h4 style="margin-top: 0; margin-bottom: 0;">Research Questions</h4>
+                    <div class="row">
+                        <div class="col col-12">
+                            <p style="text-align: justify; font-size: 20pt;">Imagine you are tasked with developing an AI/ML algorithm for detecting and recognizing specific features in medical images, intended to improve diagnostic accuracy. This algorithm must integrate with another software platform. </p>
+                        </div>
+                        <ul>
+                            <li style="font-size: 20pt; text-align: justify; margin-top: 10px; margin-bottom: 10px;" class="example-popover" title="Features"  data-bs-content="Hand-crafted Pre-processing + DNN Fearures" data-bs-toggle="popover">
+                                How would you approach understanding and defining the specific <strong>features</strong> to be detected?
+                            </li>
+
+                            <li style="font-size: 20pt; text-align: justify; margin-top: 10px; margin-bottom: 10px;" class="example-popover" title="ML Model"  data-bs-content="Overfitting & Interpretation" data-bs-toggle="popover">
+                                What steps would you take to <strong>design and train</strong> a machine learning model suitable for this kind of feature detection?
+                            </li>
+
+                            <hr />
+
+                            <li style="font-size: 20pt; text-align: justify; margin-top: 10px; margin-bottom: 10px;" class="example-popover" title="Modular Design"  data-bs-content="Containerized Application" data-bs-toggle="popover">
+                                How would you identify potential technical and integration challenges in making the algorithm compatible with the <strong>external existing software</strong>.
+                            </li>
+
+                            <hr />
+                            
+                            <li style="font-size: 20pt; text-align: justify;" class="example-popover" title="ML Ops (CI/CD)"  data-bs-content="ML FLow + Weights & Biases" data-bs-toggle="popover">
+                                How would you address these challenges to ensure <strong>seamless functionality and accuracy</strong>?
+                            </li>
+                            <li style="font-size: 20pt; text-align: justify;" class="example-popover" title="Interpretation"  data-bs-content="Monotonithity and Faithfulness" data-bs-toggle="popover">
+                                How you would design tests to validate the algorithm's <strong>effectiveness and reliability</strong>?
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+
             </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         <script src="dist/reveal.js"></script>
         <script src="plugin/chalkboard/plugin.js"></script>
@@ -249,6 +287,14 @@
         <script src="plugin/highlight/highlight.js"></script>
 
         <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            });
+            var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+                container: 'body'
+            });
+
             Reveal.initialize({
                 center: true,
                 hash: true,
@@ -305,6 +351,7 @@
                 },
                 // showNotes: true,
             });
+
         </script>
     </body>
 </html>
