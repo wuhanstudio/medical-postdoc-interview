@@ -46,9 +46,8 @@
                     <p style="font-size: 22px;"><i class="fab fa-github"></i> &nbsp; <a href="https://github.com/wuhanstudio">GitHub</a></p>
 
                     <aside class="notes">
-                        Hi, Good Afternoon! Thank you for considering my application and inviting me to the interview.
-                        I'm a Ph.D. student in Computer Science. I submitted my thesis last month, and my Ph.D. defence will be in July, next month.
-                        This is my GitHub profile. As you can see here, I use C/C++, Assembly and Python regularly for my research. I'm also familiar with Javascript and Matlab.
+                        Hi, Morming! Thank you for considering my application and inviting me to the interview.
+                        I'm a Ph.D. student in Computer Science. I submitted my thesis last month, and my Ph.D. defence will be in July, next month. So I started looking for a postdoc.
                     </aside>
                 </section>
 
@@ -187,9 +186,15 @@
                     </div>
 
                     <aside class="notes">
-                        As for my educational background, before I started my Ph.D. in Computer Science. I did a Bachelor's degree in Engineering. So I'm familiar with electronics and embedded systems to control the machine. Later after that, I moved to thermal physics for my master's degree. I learned fluid dynamics, thermodynamics and designed the thermal comtrol system for a liquid cooling garment. So I have a pretty diverse background in Engineering, Physics and Computer Science.
+                        As for my Ph.D. research, I focus on Deep Learning Security. Deep learning models are accurate, but they are vulnerable to adversarial attacks. So we try to attack object detection and tracking models in real time. I used both Tensorflow and Pytorch for my Ph.D. research. So I have some experience in Computer Vision. Later after that, I will introduce two research projects that are related to medical applicatioins. For computer vision, maybe it's more intuitive to show you a quick demo.
 
-                        Before I started my Ph.D. in the UK, I took a one-year gap due to the pandemic. I worked as an intern for a real-time operating system and a NLP cloud service company. So I'm familiar with deploying algorithms on both small hardwares and large HPC Servers. Gradually, I become interested in efficient scientific computing, combing my knowledge in physics and computer science. So I applied for this position.
+                        Now we know that deep learning models are vulnerable to adversarial attacks. Here's the problem. How can we employ deep learning models safely for medical applications? You know, safety is crucial for healthcare applicationis. In this project, we first trained serveral models to diagnose if a patient is severe or normal using tabular data. Then, we use interpretation methods to understand how machine learning models make predictions. Why it make such predictions?
+
+                        The first project only used tabular data, but you are more interested in image data, right? The second project used image data to predict if a cell was exposed to the toxin. We first trained traditional machine learning models, such as gradient boosted trees. The accuracy was pretty high, over 95% percent. But this usually indicates something is wrong. So we used the SHAPley value to interpret how the model make predictions. As you can see here, the most important pixels are scattered outside of the cell, which means the model make predictions based on the background rather than the cell. That is not correct. But then we realized that for cells that were exposed to the toxin, the images were taken in the evening, so the background was darker. While for cells that were not exposed to the toxin, the images were taken in the morning. So, the machine learning model somehow figured out that the background were different for different cells because the experiment were conducted at different time. 
+                        
+                        After that, we trained deep learning models, such as vision transformer and resenet, and we used the same Shapley value to interpret predictions. This time, we found deep learning models actually looked at pixels inside the cell, rather than the background.
+
+                        So, these are the projects that I worked on during my Ph.D. Here is a list of publications and my teaching experience.
                     </aside>
                 </section>
 
