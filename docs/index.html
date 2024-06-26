@@ -187,9 +187,9 @@
 
                     <aside class="notes">
                         As for my Ph.D. research, I focus on Deep Learning Security. Deep learning models are accurate, but they are vulnerable to adversarial attacks. So we try to attack object detection and tracking models in real time. I used both Tensorflow and Pytorch for my Ph.D. research. So I have some experience in Computer Vision. Later after that, I will introduce two research projects that are related to medical applicatioins. For computer vision, maybe it's more intuitive to show you a quick demo.
-
+                        <br /><br />
                         Now we know that deep learning models are vulnerable to adversarial attacks. Here's the problem. How can we employ deep learning models safely for medical applications? You know, safety is crucial for healthcare applicationis. In this project, we first trained serveral models to diagnose if a patient is severe or normal using tabular data. Then, we use interpretation methods to understand how machine learning models make predictions. Why it make such predictions?
-
+                        <br /><br />
                         The first project only used tabular data, but you are more interested in image data, right? The second project used image data to predict if a cell was exposed to the toxin. We first trained traditional machine learning models, such as gradient boosted trees. The accuracy was pretty high, over 95% percent. But this usually indicates something is wrong. So we used the SHAPley value to interpret how the model make predictions. As you can see here, the most important pixels are scattered outside of the cell, which means the model make predictions based on the background rather than the cell. That is not correct. But then we realized that for cells that were exposed to the toxin, the images were taken in the evening, so the background was darker. While for cells that were not exposed to the toxin, the images were taken in the morning. So, the machine learning model somehow figured out that the background were different for different cells because the experiment were conducted at different time. 
                         
                         After that, we trained deep learning models, such as vision transformer and resenet, and we used the same Shapley value to interpret predictions. This time, we found deep learning models actually looked at pixels inside the cell, rather than the background.
@@ -349,7 +349,7 @@
                         }
                     ]
                 },
-                // showNotes: true,
+                showNotes: true,
             });
 
         </script>
